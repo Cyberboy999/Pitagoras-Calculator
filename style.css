@@ -1,0 +1,136 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;  
+}
+
+/* Estilizacao Da Imagem */
+#temple{
+  margin-top: 20px;
+}  
+
+/* Estilizacao de Titulos */
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size: 50px;
+  text-shadow: 2px 2px rgba(248, 247, 247, 0.555);
+  transition: linear 0.5s; 
+  text-align: center;
+}
+
+/* Estilizacao de textos */
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:16px;
+  color: #000000;
+  font-style: italic;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+
+/* Estilizacao das ondas */
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; 
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Estilizacao dos campos de preenchimento */
+input{  
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.692);    
+  font-size: 16px;    
+  line-height: 17px; 
+  text-align: center;    
+  border-radius: 5px; 
+  padding: 5px 5px 5px 5px;
+}
+
+/* Estilizacao dos botoes de enviar e apagar */
+#calc, #limpar{    
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+#calc:hover{
+  background-color: rgb(14, 218, 58);
+}
+
+#limpar:hover{
+  background-color: rgb(224, 27, 27);
+}
+  
+/*-----------------animacoes---------------------*/
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/*-----------------mobile---------------------*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
