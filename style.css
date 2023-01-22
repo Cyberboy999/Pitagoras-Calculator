@@ -7,6 +7,7 @@ body {
 /* Estilizacao Da Imagem */
 #temple{
   margin-top: 20px;
+  text-align: center;
 }  
 
 /* Estilizacao de Titulos */
@@ -59,8 +60,6 @@ p {
 
 /* Estilizacao dos campos de preenchimento */
 input{  
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -125,8 +124,8 @@ animation-duration: 7s;
   }
 }
 
-/*-----------------mobile---------------------*/
-@media (max-width: 768px) {
+/*---Responsividade Das Ondas---*/
+@media (max-width: 800px) {
   .waves {
     height:40px;
     min-height:40px;
@@ -134,7 +133,45 @@ animation-duration: 7s;
   .content {
     height:30vh;
   }
-  h1 {
-    font-size:24px;
+}
+
+/*---Responsividade Do Site---*/
+@media (max-width: 800px) {
+
+  html {
+    font-size: 87.5%;
   }
+
+  p {
+    font-family: 'Lato', sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #ffffff;
+    font-style: italic;
+  }
+
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    letter-spacing: 2px;
+    font-size: 37px;
+    text-shadow: 2px 2px rgba(248, 247, 247, 0.555);
+    transition: linear 0.5s; 
+    text-align: center;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+
+  form {
+    display: grid;
+    gap: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    height:10vh;
+  }
+
 }
