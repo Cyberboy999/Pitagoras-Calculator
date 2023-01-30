@@ -62,7 +62,7 @@ p {
 input{  
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: rgba(255, 255, 255, 0.692);    
   font-size: 16px;    
   line-height: 17px; 
@@ -73,13 +73,15 @@ input{
 
 /* Estilizacao dos botoes de enviar e apagar */
 #calc, #limpar{    
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
   border-width: 1px;
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 1rem;
 }
 
 #calc:hover{
@@ -164,7 +166,7 @@ animation-duration: 7s;
 
   form {
     display: grid;
-    gap: 0.5rem;
+    gap: 1px;
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 2rem;
@@ -174,4 +176,7 @@ animation-duration: 7s;
     height:10vh;
   }
 
+  input{  
+    margin-bottom: 5px;
+  }
 }

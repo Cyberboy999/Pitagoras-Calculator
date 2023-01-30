@@ -1,17 +1,34 @@
 //---Criando funcao para fazer os cauculos do teorema de pitagoras---//
 function Calcula() {
-    var catetoOposto = document.getElementById("catetoOposto").value;
-    var catetoAdjacente = document.getElementById("catetoAdjacente").value;
+    var Oposto = document.getElementById("Oposto").value;
+    var Adjacente = document.getElementById("Adjacente").value;
+    var Hipotenusa = document.getElementById("Hipotenusa").value;
 
-    var hipotenusa = Math.sqrt( Math.pow(catetoOposto, 2) + Math.pow(catetoAdjacente, 2));
+//---Verificaçao de valores colocados---//
 
-    var inputHipotenusa = document.getElementById("hipotenusa");
-    inputHipotenusa.value = hipotenusa;
+    if (Oposto && Adjacente) {
+        var Hipotenusa = Math.sqrt(Math.pow(Oposto, 2) + Math.pow(Adjacente, 2));
+      } 
+    else if (Adjacente && Hipotenusa) {
+        var Oposto = Math.sqrt(Math.pow(Hipotenusa, 2) - Math.pow(Adjacente, 2));
+      } 
+    else if (Oposto && Hipotenusa) {
+        var Adjacente = Math.sqrt(Math.pow(Hipotenusa, 2) - Math.pow(Oposto, 2));
+      }
+
+//---Expondo resultados na web---//
+
+    var inputHipotenusa = document.getElementById("Hipotenusa");
+    inputHipotenusa.value = Hipotenusa;
+    var inputAdjacente = document.getElementById("Adjacente");
+    inputAdjacente.value = Adjacente;
+    var inputOposto = document.getElementById("Oposto");
+    inputOposto.value = Oposto;
 }
 
 //---Criando funcao para limpar os campos de preenchimento---//
 function Limpar(){
-    catetoOposto.value = ""
-    catetoAdjacente.value = ""
-    hipotenusa.value = ""
+    Oposto.value = ""
+    Adjacente.value = ""
+    Hipotenusa.value = ""
 }
